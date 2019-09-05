@@ -1,8 +1,6 @@
 from src.confing.application_service_config import *
 from requests.sessions import Session
-from src.comm.case_model import CaseModel
 import re
-from src.comm.data_transformation import DataTransformation
 
 
 class Application(Session):
