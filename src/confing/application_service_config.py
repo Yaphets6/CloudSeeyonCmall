@@ -1,7 +1,7 @@
 
 
 #   DEE服务器接口配置信息
-dee_service = {"connect_type": "http", "host": "192.168.225.11", "port": "8085"}
+dee_service = {"connect_type": "http", "host": "127.0.0.1", "port": "8080"}
 dee_request_headers = {"Content-Type": "application/json"}
 dee_request_cookies = {"Cookies": ""}
 dee_login = {"path": "", "parameter_type": "", "login_token": ""}
@@ -9,7 +9,7 @@ DEE = {"service": dee_service, "headers": dee_request_headers,
        "cookies": dee_request_cookies, "login": dee_login, "application_name": "DEE"}
 
 #   v5服务器接口配置信息
-v5_service = {"connect_type": "http", "host": "seeyonapp.seeyon.com", "port": "80"}
+v5_service = {"connect_type": "http", "host": "127.0.0.1", "port": "80"}
 v5_request_headers = {"Connection": "keep-alive",
                       "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
                       "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
@@ -25,7 +25,7 @@ V5 = {"service": v5_service, "headers": v5_request_headers,
 
 
 #   用户中心服务器接口配置
-chome_service = {"connect_type": "https", "host": "chome.seeyon.com", "port": "443"}
+chome_service = {"connect_type": "https", "host": "127.0.0.1", "port": "443"}
 chome_request_headers = {"Connection": "keep-alive",
                          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
                          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
