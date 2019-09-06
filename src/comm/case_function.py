@@ -2,12 +2,12 @@ import json
 from src.comm.case_model import CaseModel
 from src.comm.data_transformation import DataTransformation
 
+
 class CaseFunction:
 	
 	def __init__(self, application):
 		self.function = application
-		
-		
+
 	def set_case_content_by_case_number(self, case_number):
 		case_content = CaseModel.get_case_content(case_number)
 		url = "%s%s" % (self.function.application_service, case_content["接口地址"])

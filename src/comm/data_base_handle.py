@@ -33,11 +33,18 @@ class MysqlBase:
         db_boj = self.get_mysql_connect_obj()
         db_boj.cursor.execute(sql_list, multi=True)
 
+    #   执行sql后自动关闭数据库连接
     def execute_sql(self, sql):
         db = self.get_mysql_connect_obj()
         db.cursor.execute(sql, multi=False)
         db.mysql_commit()
         db.close_mysql_db(db)
+
+    #   执行sql后不关闭数据库连接
+    def execute_sql_not_close(self, sql):
+        db = self.get_mysql_connect_obj()
+        db.cursor.execute(sql, multi=False)
+        db.mysql_commit()
 
     def mysql_commit(self):
         try:
@@ -57,6 +64,13 @@ class MysqlBase:
         #     print("执行sql无查询结果")
         #     db.close_mysql_db(db)
         #     return None
+
+    def get_mysql_execute_result_not_close(self, sql):
+        db = self.get_mysql_connect_obj()
+        db.cursor.execute(sql, multi=False)
+        result = db.cursor.fetchall()
+        db.mysql_commit()
+        return result
 
     @staticmethod
     def close_mysql_db(db):
